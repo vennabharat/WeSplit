@@ -53,7 +53,7 @@ struct ContentView: View {
             }
                 Section { // Section to display the result
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                        .foregroundColor(tipPercentage == 0 ? .red : .black)
+                        .foregroundColor(tipPercentage == 0 ? .red : .black)// conditional modifier for 0 tip selection
                 }
             }
             .navigationTitle("WeSplit")
