@@ -40,14 +40,14 @@ struct ContentView: View {
                         }
                     }
                 }
-            Section {
-                Picker("Tip percentage", selection: $tipPercentage){ // Picker for selecting the tip percentage
-                    ForEach(tipPercentages, id: \.self) { // Looping through array
-                        Text("\($0)")
+                Section {
+                    Picker("Tip percentage", selection: $tipPercentage){ // Picker for selecting the tip percentage
+                        ForEach(tipPercentages, id: \.self) { // Looping through array
+                            Text("\($0)")
+                        }
                     }
+                    .pickerStyle(.segmented) // Selecting a picker style
                 }
-                .pickerStyle(.segmented) // Selecting a picker style
-            }
             header: {
                 Text("Select tip percentage") // Heading for the picker
             }
